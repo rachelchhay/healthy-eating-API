@@ -10,6 +10,10 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/search', (req, res) => {
+  console.log(res);
+});
+
 router.post('/', (req,res) => {
   Posts.create(req.body, (err, createdPost) => {
     res.json(createdPost);
